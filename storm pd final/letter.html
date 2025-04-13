@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="color: rgb(208, 241, 243);">Home</a>
+    <a href="letter.html" style="color: rgb(208, 241, 243);">Letter</a>
+    <a href="gallery.html" style="color: rgb(208, 241, 243);">Gallery</a>
+    <a href="about.html" style="color: rgb(208, 241, 243);">About Us</a>
+    <a href="fun.html" style="color: rgb(208, 241, 243);">Fun</a>
+    <a href="thankyou.html" style="color: rgb(208, 241, 243);">Thank You</a>
+  </nav>
+  
+  <!-- Rain effect container -->
+  <div class="rain" id="rain"></div>
+
+  <!-- Message Box -->
+  <div class="message-box">
+    <h1>Dear Pratyasha,</h1>
+    <p>
+      I’ve thought about this a lot.<br>
+      Not replying, not reaching out right — that’s on me.<br>
+      But this site, these words, they’re me saying I do care. A lot. A frickinnnnn lotttttt
+    </p>
+    <img src="us2.jpg" alt="stormy pic" style="width: 20%; border-radius: 10px;">
+  </div>
+
+  <script>
+    // Rain drop generation script
+    const rain = document.getElementById('rain');
+    for (let i = 0; i < 150; i++) {
+      const drop = document.createElement('div');
+      drop.classList.add('drop');
+      drop.style.left = `${Math.random() * 100}%`; // Random position across the width
+      drop.style.animationDuration = `${Math.random() * 2 + 1}s`; // Random duration
+      drop.style.animationDelay = `${Math.random() * 5}s`; // Random delay
+      rain.appendChild(drop);
+    }
+  </script>
+</body>
+</html>
