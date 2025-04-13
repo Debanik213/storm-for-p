@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="color: rgb(208, 241, 243);">Home</a>
+    <a href="letter.html" style="color: rgb(208, 241, 243);">Letter</a>
+    <a href="gallery.html" style="color: rgb(208, 241, 243);">Gallery</a>
+    <a href="about.html" style="color: rgb(208, 241, 243);">About Us</a>
+    <a href="fun.html" style="color: rgb(208, 241, 243);">Fun</a>
+    <a href="thankyou.html" style="color: rgb(208, 241, 243);">Thank You</a>
+  </nav>
+  
+  <!-- Add rain effect -->
+  <div class="rain" id="rain"></div>
+
+  <div class="message-box">
+    <h1>Us — A Tiny Tale</h1>
+    <p>
+      Two people, one storm, one idiot, and one constant chaos of care.<br>
+      I might be dumb at showing it, but you’ve always mattered more than I let on.
+    </p>
+  </div>
+
+  <script>
+    // Rain effect script
+    const rain = document.getElementById('rain');
+    for (let i = 0; i < 150; i++) {
+      const drop = document.createElement('div');
+      drop.classList.add('drop');
+      drop.style.left = `${Math.random() * 100}%`;
+      drop.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      drop.style.animationDelay = `${Math.random() * 5}s`;
+      rain.appendChild(drop);
+    }
+  </script>
+</body>
+</html>
